@@ -163,7 +163,6 @@ body {
 
 nav {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 1.2rem 6vw;
@@ -174,7 +173,7 @@ nav {
   width: 92vw;
   left: 4vw;
   top: 1.2vw;
-  z-index: 1000;
+  z-index: 100;
   backdrop-filter: blur(12px);
   transition: background 0.3s;
   border: 1px solid rgba(168,85,247,0.1);
@@ -772,68 +771,46 @@ footer .footer-line {
 
 @media (max-width: 900px) {
   nav {
-    flex-direction: column;
-    gap: 1.2rem;
-    padding: 1rem 2vw;
-    width: 96vw;
-    left: 2vw;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    border-radius: 0 0 1rem 1rem;
+    min-height: 60px;
+    z-index: 1000;
   }
-  
+  .hamburger {
+    order: 2;
+    margin-left: auto;
+    margin-right: 0.5rem;
+    display: flex;
+  }
+  .header-social-links {
+    order: 1;
+    margin-right: auto;
+    margin-left: 0;
+  }
   .nav-links {
-    gap: 1.5rem;
+    margin: 0 auto;
   }
-  
-  .nav-links a {
-    font-size: 1rem;
-    padding: 0.4rem 1rem;
-  }
-  
-  .hero {
-    flex-direction: column;
-    padding: 18vw 4vw 0 4vw;
-    gap: 2.5vw;
-    text-align: center;
-  }
-  
-  .hero-content {
-    max-height: 90px;
-    padding-top: 0.3rem;
-    padding-bottom: 0.3rem;
-  }
-  
-  .hero-content h1 {
-    font-size: 2.4rem;
-  }
-  
-  .hero-image::before,
-  .hero-image::after,
-  .hero-image .shape-1,
-  .hero-image .shape-2,
-  .hero-image .shape-3,
-  .hero-image .shape-4 {
-    display: none;
-  }
-  
-  section {
-    padding: 3.5rem 3vw 1.5rem 3vw;
-  }
-  
-  h2 {
-    font-size: 2.2rem;
-  }
-  
-  .project-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  
-  .skills-grid {
-    flex-direction: column;
-  }
-  
-  .skill-category {
-    min-width: auto;
-  }
+}
+
+.hero {
+  padding-top: 90px !important; /* أو حسب ارتفاع الهيدر عندك */
+}
+
+.hero-content {
+  margin-top: 0 !important;
+}
+
+header, nav {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100vw !important;
+  z-index: 1000;
 }
 
 @media (max-width: 768px) {
