@@ -1,6 +1,6 @@
 // Typing Effect for Hero Section
 const typingTexts = [
-  ["I am Mahmoud Ibrahim", "Telecom Application Developer"],
+  ["Hello, I am Mahmoud Ibrahim", "Telecom Application Developer"],
 ];
 const typingElement = document.querySelector(".typing-effect");
 let textIndex = 0;

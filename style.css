@@ -295,7 +295,7 @@ nav {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 8vw 6vw 0 6vw;
+  padding: 7vw 5vw 0 4vw;
   min-height: 80vh;
   gap: 2vw;
 }
@@ -304,7 +304,7 @@ nav {
   z-index: 1;
   max-height: 200px; /* تقليل الارتفاع */
   overflow: hidden;
-  padding-top: 0.5rem;
+  padding-top: 0rem;
   padding-bottom: 0.5rem;
 }
 .hero-content h1 {
@@ -415,8 +415,8 @@ nav {
 }
 
 .hero-image img {
-  width: 600px;
-  height: 400px;
+  width: 800px;
+  height: 600px;
   max-width: 90vw;
   max-height: 90vw;
   aspect-ratio: 1/1;
