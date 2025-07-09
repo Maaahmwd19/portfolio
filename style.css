@@ -1055,7 +1055,6 @@ footer .footer-line {
   
   .skill-category li {
     font-size: 0.95rem;
-    padding-left: 1rem;
   }
   
   .social-links {
@@ -1358,7 +1357,7 @@ footer .footer-line {
 @media (max-width: 600px) {
   .hero {
     padding-top: 2px !important;
-    padding-bottom: 2px !important;
+    padding-bottom: 0 !important;
   }
   .hero-image {
     margin: 0 !important;
@@ -1374,9 +1373,15 @@ footer .footer-line {
     height: auto !important;
     max-width: 98vw !important;
     margin: 0 !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
     display: block !important;
     object-fit: cover !important;
     border-radius: 1rem !important;
+  }
+  .hero-image > div {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
   }
 }
 
