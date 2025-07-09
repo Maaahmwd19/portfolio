@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title> Mahmoud Ibrahim  </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
+
+    <!-- Header/Navigation -->
+    <header>
+        <nav>
+
+            <ul class="nav-links">
+                <!-- not work -->
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#awards">Awards</a></li>
+                <li><a href="#volunteering">Volunteering</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+            <div class="header-social-links">
+                <a href="https://www.linkedin.com/in/mahmoud-ibrahim1901/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Maaahmwd19" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mahmoud.ibrahim.ellaban@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+                <a href="tel:+201220491910" target="_blank"><i class="fas fa-phone"></i></a>
+                <button id="theme-toggle" class="theme-toggle" title="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1><span class="typing-effect">Telecom Application Developer</span></h1>
+        </div>
+        <div class="hero-image">
+            <div class="shape-1"></div>
+            <div class="shape-2"></div>
+            <div class="shape-3"></div>
+            <div class="shape-4"></div>
+            <div style="position: relative; display: inline-block;">
+                <img src="c.jpg" alt="Telecom Network" class="hero-photo-effect" style="border-radius: 80%; object-fit: cover;">
+                <span style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.6); color: #fff; padding: 6px 16px; border-radius: 16px; font-size: 1.1em; font-family: 'Playfair Display', serif;">
+                    😊
+                </span>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2><i class="fas fa-user"></i> About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Enthusiastic and dedicated Communication and Electronics Engineer, graduated from the Faculty of Engineering. Passionate about continuous learning and development, with skills in programming languages such as C and Java. Proficient in Database Management Systems, like MySQL and PostgreSQL, and experienced in Linux System Administration I,II. Well-versed in Mobile Network architecture, Billing and Charging systems, and scripting with Bash for automation tasks. I am committed to leveraging these skills to contribute effectively to a dynamic and innovative team.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+        <div class="about-content">
+          <div class="about-text" style="width:100%;">
+            <div class="edu-entry iti-entry" style="display: flex; align-items: center; justify-content: space-between;">
+                <div class="edu-main">
+                    <strong>Information Technology Institute (ITI)</strong>,<br>
+                     <span style="font-style:italic;">Telecom Application Development, 9 - Months, Professional Training Program (PTP)</span>.
+                </div>
+                <div class="edu-details">
+                    <span>2024 Oct – 2025 Jul</span> | <span>Smart Village, Egypt</span>
+                </div>
+                <img src="iti_logo.png" alt="ITI Logo" class="iti-logo" style="height: 56px; margin-left: 18px; margin-right: 0;" />
+            </div>
+            <div class="edu-entry" style="display: flex; align-items: center; justify-content: space-between;">
+                <div class="edu-main">
+                    <strong>Faculty of Engineering, Port Said University</strong>,<br>
+                    <span style="font-style:italic;">B.Sc. in Electrical Engineering (Electronics & Communications)</span>
+                </div>
+                <div class="edu-details">
+                    <span>2019 Sept – 2024 Jul</span> &nbsp;|&nbsp; <span>Port Said, Egypt</span>
+                </div>
+                <div style="display: flex; gap: 8px; margin-left: 18px;">
+                  <img src="eng.jpeg" alt="Engineering Logo" style="height: 48px; border-radius: 8px; background: #fff;" />
+                  <img src="psuLogo.png" alt="PSU Logo" style="height: 48px; border-radius: 8px; background: #fff;" />
+                </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2 id="projects-title">
+          <i class="fas fa-code-branch"></i> Projects
+        </h2>
+        <div class="project-grid">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3>IVR Platform using Asterisk VXML, SIP & REST API</h3>
+                        <span class="tech-tag">Asterisk</span>
+                        <span class="tech-tag">VXML</span>
+                        <span class="tech-tag">SIP</span>
+                        <span class="tech-tag">REST API</span>
+                    </div>
+                    <p>(ITI - Graduation Project) Interactive Voice Response (IVR) platform that leverages a SIP client application to interact with an Asterisk backend server. The system plays VXML (VoiceXML) scripts based on dialed short codes and collects user inputs for analysis.</p>
+                </div>
+                <div class="project-actions">
+                    <a href="https://github.com/Maaahmwd19/IVR-Platform-using-Asterisk-VXML-and-SIP" class="project-link" target="_blank">GitHub →</a>
+                    <a href="#" class="project-link" target="_blank"><i class="fa-regular fa-eye"></i> View Demo</a>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="project-card">
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3>Telecom Billing System</h3>
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">Servlets</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">PDF</span>
+                    </div>
+                    <p>ITI-Project. A complete end-to-end Telecom Billing and Customer Management System built with Java, Servlets, PostgreSQL, and PDF invoicing.</p>
+                </div>
+                <div class="project-actions">
+                    <a href="https://github.com/Maaahmwd19/Telecom-Billing-System" class="project-link" target="_blank">GitHub →</a>
+                    <a href="#" class="project-link" onclick="openVideoModal('https://drive.google.com/file/d/1hZS2Jbe-_eowdaWyn8Nxwb9fry42NHwf/preview')" style="cursor:pointer;"><i class="fa-regular fa-eye"></i> View Demo</a>
+                </div>
+            </div>
+            <!-- Project 3 -->
+            <div class="project-card">
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3>Database Management System Using Bash Scripts</h3>
+                        <span class="tech-tag">Bash</span>
+                        <span class="tech-tag">CLI</span>
+                    </div>
+                    <p>ITI-Project. Developed a Bash Shell DBMS with CLI menu, CRUD support, metadata separation, and GUI extension.</p>
+                </div>
+                <div class="project-actions">
+                    <a href="https://github.com/Maaahmwd19/BashDB-Database-Management-System-Using-Bash-Scripts" class="project-link" target="_blank">GitHub →</a>
+                    <a href="#" class="project-link" onclick="openVideoModal('https://drive.google.com/file/d/1ff_Bhrv_BG0J6aoWC7GFBvHKAAHwP04S/preview')" style="cursor:pointer;"><i class="fa-regular fa-eye"></i> View Demo</a>
+                </div>
+            </div>
+            <!-- Project 4 -->
+            <div class="project-card">
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3>Voice-Based Balance Query Service Using SIP</h3>
+                        <span class="tech-tag">SIP</span>
+                        <span class="tech-tag">Asterisk</span>
+                        <span class="tech-tag">REST API</span>
+                    </div>
+                    <p>ITI-Project. SIP-based voice service for balance queries with Asterisk and REST API.</p>
+                </div>
+                <div class="project-actions">
+                    <a href="https://github.com/Maaahmwd19/Voice-Based-Balance-Query-Service-Using-SIP" class="project-link" target="_blank">GitHub →</a>
+                    <a href="#" class="project-link" onclick="openVideoModal('https://drive.google.com/file/d/1mJeaAQEaFgxkGEthgcaYdZ56KN2s4R_o/preview')" style="cursor:pointer;"><i class="fa-regular fa-eye"></i> View Demo</a>
+                </div>
+            </div>
+            <!-- Project 5 -->
+            <div class="project-card">
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3>Real-Time Prepaid Charging System for Voice Calls</h3>
+                        <span class="tech-tag">UDP</span>
+                        <span class="tech-tag">TCP</span>
+                    </div>
+                    <p>ITI project. Real-time prepaid voice call charging with UDP and TCP integration.</p>
+                </div>
+                <div class="project-actions">
+                    <a href="https://github.com/Maaahmwd19/Real-Time-Prepaid-Charging-System-for-Voice-Calls" class="project-link" target="_blank">GitHub →</a>
+                </div>
+            </div>
+            <!-- Project 6 -->
+            <div class="project-card">
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3>Twilio SMS Client Service</h3>
+                        <span class="tech-tag">Twilio API</span>
+                        <span class="tech-tag">Docker</span>
+                    </div>
+                    <p>ITI-Project. A Web-Based SMS Management System with Twilio API Integration and Role-Based Access Control, which contains Docker requirements.</p>
+                </div>
+                <div class="project-actions">
+                    <a href="https://github.com/Maaahmwd19/ITI_Twilio_SMS_Client_Service" class="project-link" target="_blank">GitHub →</a>
+                    <a href="#" class="project-link" onclick="openVideoModal('https://drive.google.com/file/d/14dRKc1xk6LPJZt1CQYVri0UU3u4yp_qo/preview')" style="cursor:pointer;"><i class="fa-regular fa-eye"></i> View Demo</a>
+                </div>
+            </div>
+            <!-- Project 7 -->
+            <div class="project-card">
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3>Photovoltaic Aquaponic System Using IoT & AI</h3>
+                        <span class="tech-tag">IoT</span>
+                        <span class="tech-tag">AI</span>
+                        <span class="tech-tag">Photovoltaic</span>
+                    </div>
+                    <p>(Graduation Project, Excellent Degree) Sponsored by: ITIDA, ITAC program. Built an intelligent aquaponic setup utilizing photovoltaic power, IoT devices, and AI for smart farming.</p>
+                </div>
+                <div class="project-actions" style="justify-content: flex-end;">
+                    <a href="#" class="project-link" onclick="openImageModal('portfolio/Projects Demo/GP.jpg')" style="cursor: pointer;"><i class="fa-regular fa-eye"></i> View ProtoType</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <h2><i class="fas fa-gears"></i> Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category" style="width:100%;">
+                <ul style="list-style:none; padding:0;">
+                    <li><strong>Telecommunication:</strong> GSM, 3G, 4G and 5G, SS7, Charging, Billing, VAS, Provisioning, Mediation, BroadBand, Fintech</li>
+                    <li><strong>System Administration:</strong> Linux System Admin I, II, Bash Scripting</li>
+                    <li><strong>Databases:</strong> PostgreSQL, MySQL</li>
+                    <li><strong>Programming Languages:</strong> C / C++, Java, Python</li>
+                    <li><strong>Software Methodologies:</strong> Agile, Scrum, Data Structure and Algorithm, OOP principles</li>
+                    <li><strong>Web Development:</strong> HTML5, CSS3 and JavaScript, Java servlet, RESTFUL API</li>
+                    <li><strong>Version Control:</strong> GitHub</li>
+                    <li><strong>Others:</strong> Knowledge In IoT Systems, XML, JSON</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section id="awards" class="awards">
+        <h2><i class="fas fa-trophy"></i> Awards</h2>
+        <div class="skills-grid">
+            <div class="skill-category" style="width:100%;">
+                <ul style="list-style:none; padding:0;">
+                    <li><strong>First place at Port Said Engineering Day Competition</strong></li>
+                    <li>Awarded First Place for developing an AI & IoT-powered Aquaponic System.</li>
+                </ul>
+                <div class="awards-images" style="display: flex; flex-direction: row; gap: 32px; margin-top: 18px;">
+                    <img src="portfolio/Projects Demo/DSC_9338.jpg" alt="Award Ceremony"
+                         style="width: 100%; max-width: 48%; margin: 0 auto; border-radius: 16px; box-shadow:0 2px 8px #0002; display: block; transition: transform 0.4s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s;">
+                    <img src="portfolio/Projects Demo/psed.jpg" alt="Award Certificate"
+                         style="width: 100%; max-width: 48%; margin: 0 auto; border-radius: 16px; box-shadow:0 2px 8px #0002; display: block; transition: transform 0.4s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s;">
+                </div>
+                <style>
+                  .awards-images img:hover {
+                    transform: scale(1.07) rotate(-1deg);
+                    box-shadow: 0 8px 32px #0004;
+                  }
+                </style>
+            </div>
+        </div>
+    </section>
+
+    <!-- Volunteering Section -->
+    <section id="volunteering" class="volunteering">
+        <h2><i class="fas fa-hands-helping"></i> Volunteering</h2>
+        <div class="skills-grid">
+            <div class="skill-category" style="width:100%;">
+                <ul style="list-style:none; padding:0;">
+                    <li><strong> Port Said Engineering Day (PSED)</strong>, head of secretary committee.</li>
+                    <li><strong>Port Said Faculty of Engineering Students Union</strong>, Vice Head of Scientific Committee.</li>
+                    <li><strong>Google Developer Groups Port Said (GDGs)</strong>, Organizer</li>
+                    <li><strong>IEEE PSU Branch</strong>, Member of Secretary Committee.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+
+        <h2><i class="fas fa-envelope"></i> Contact Me</h2>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/mahmoud-ibrahim1901/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Maaahmwd19" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mahmoud.ibrahim.ellaban@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+            <a href="tel:+201220491910" target="_blank"><i class="fas fa-phone"></i> +201220491910</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Mahmoud-Ibrahim. All rights reserved.</p>
+    </footer>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="modal" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.7); justify-content:center; align-items:center;">
+      <div style="background:#fff; border-radius:16px; max-width:1200px; max-height:98vh; padding:2.5rem; position:relative; box-shadow:0 8px 32px rgba(0,0,0,0.2); display:flex; flex-direction:column; align-items:center; width:90vw;">
+        <button id="closeModalBtn" style="position:absolute; top:10px; right:10px; background:none; border:none; font-size:2rem; color:#222; cursor:pointer;">&times;</button>
+        <iframe id="demoVideoIframe" style="width:100%; min-height:75vh; max-width:1180px; max-height:95vh; border-radius:12px; background:#000;" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.7); justify-content:center; align-items:center;">
+      <div style="background:#fff; border-radius:16px; max-width:1200px; max-height:90vh; padding:1.5rem; position:relative; box-shadow:0 8px 32px rgba(0,0,0,0.2); display:flex; flex-direction:column; align-items:center; width:90vw;">
+        <button id="closeImageModalBtn" style="position:absolute; top:10px; right:10px; background:none; border:none; font-size:2rem; color:#222; cursor:pointer;">&times;</button>
+        <img id="modalImage" style="width:100%; max-width:1100px; max-height:75vh; border-radius:12px; object-fit: contain;">
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Enhanced navigation for projects section
+        document.querySelectorAll('.nav-links a').forEach(link => {
+          link.addEventListener('click', function(e) {
+            e.preventDefault();
+            let targetId = this.getAttribute('href').slice(1);
+
+            // Special handling for projects section
+            if (targetId === 'projects') {
+              targetId = 'projects-title';
+              const targetElement = document.getElementById(targetId);
+              if (targetElement) {
+                const headerHeight = document.querySelector('header') ? document.querySelector('header').offsetHeight : 0;
+                const targetPosition = targetElement.offsetTop - headerHeight - 20;
+                
+                window.scrollTo({
+                  top: targetPosition,
+                  behavior: 'smooth'
+                });
+              }
+            } else {
+              // Default smooth scrolling for other sections
+              const section = document.getElementById(targetId);
+              if (section) {
+                const headerHeight = document.querySelector('header') ? document.querySelector('header').offsetHeight : 0;
+                const targetPosition = section.offsetTop - headerHeight - 20;
+                
+                window.scrollTo({
+                  top: targetPosition,
+                  behavior: 'smooth'
+                });
+              }
+            }
+          });
+        });
+
+        // Image Modal Functions
+        function openImageModal(imageSrc) {
+          const modal = document.getElementById('imageModal');
+          const modalImage = document.getElementById('modalImage');
+          modalImage.src = imageSrc;
+          modal.style.display = 'flex';
+        }
+
+        // Close image modal
+        document.getElementById('closeImageModalBtn').addEventListener('click', function() {
+          document.getElementById('imageModal').style.display = 'none';
+        });
+
+        // Close image modal when clicking outside
+        document.getElementById('imageModal').addEventListener('click', function(e) {
+          if (e.target === this) {
+            this.style.display = 'none';
+          }
+        });
+
+        // Video Modal Functions
+        function openVideoModal(videoSrc) {
+          const modal = document.getElementById('videoModal');
+          const iframe = document.getElementById('demoVideoIframe');
+          // استخدم preview من Google Drive أو mp4 محلي
+          if (videoSrc.endsWith('.mp4')) {
+            iframe.src = '';
+            iframe.style.display = 'none';
+            // استخدم video tag مؤقتاً لو أردت دعم mp4 محلي
+            // أو يمكنك تحويل كل الفيديوهات إلى Google Drive preview
+            alert('هذا الفيديو متاح فقط للتنزيل أو العرض المباشر من Google Drive.');
+          } else {
+            iframe.src = videoSrc;
+            iframe.style.display = 'block';
+          }
+          modal.style.display = 'flex';
+        }
+        document.getElementById('closeModalBtn').addEventListener('click', function() {
+          document.getElementById('videoModal').style.display = 'none';
+          document.getElementById('demoVideoIframe').src = '';
+        });
+    </script>
+</body>
+</html>
