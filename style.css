@@ -163,6 +163,7 @@ body {
 
 nav {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 1.2rem 6vw;
@@ -173,7 +174,7 @@ nav {
   width: 92vw;
   left: 4vw;
   top: 1.2vw;
-  z-index: 100;
+  z-index: 1000;
   backdrop-filter: blur(12px);
   transition: background 0.3s;
   border: 1px solid rgba(168,85,247,0.1);
@@ -415,8 +416,8 @@ nav {
 }
 
 .hero-image img {
-  width: 500px;
-  height: 400px;
+  width: 705px;
+  height: 550px;
   max-width: 90vw;
   max-height: 90vw;
   aspect-ratio: 1/1;
