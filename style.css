@@ -431,11 +431,13 @@ nav {
 
 @media (max-width: 600px) {
   .hero-image img {
-    width: 160px;
-    height: 160px;
-    max-width: 80vw;
-    max-height: 80vw;
-    border-radius: 22%;
+    width: 90vw !important;
+    height: auto !important;
+    max-width: 320px !important;
+    min-width: 180px !important;
+    margin: 0 auto !important;
+    display: block !important;
+    object-fit: cover !important;
   }
 }
 
