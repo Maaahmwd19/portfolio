@@ -415,8 +415,8 @@ nav {
 }
 
 .hero-image img {
-  width: 700;
-  height: 500px;
+  width: 500px;
+  height: 400px;
   max-width: 90vw;
   max-height: 90vw;
   aspect-ratio: 1/1;
