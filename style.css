@@ -1363,9 +1363,9 @@ footer .footer-line {
     margin-top: 32px !important;    /* نزل الصورة تحت */
   }
   .hero-image img {
-    width: 180px !important;        /* كبر الصورة */
-    height: 180px !important;
-    max-width: 95vw !important;
+    width: 350px !important;
+    height: 350px !important;
+    max-width: 98vw !important;
     margin: 0 auto !important;
     display: block !important;
     object-fit: cover !important;
