@@ -295,13 +295,17 @@ nav {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 8vw 6vw 0 6vw;
-  min-height: 90vh;
+  padding: 4vw 2vw 0 6vw;
+  min-height: 20vh;
   gap: 2vw;
 }
 .hero-content {
   flex: 1 1 350px;
   z-index: 1;
+  max-height: 120px; /* تقليل الارتفاع */
+  overflow: hidden;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 .hero-content h1 {
   font-family: 'Playfair Display', serif;
@@ -411,14 +415,26 @@ nav {
 }
 
 .hero-image img {
+  width: 100%;
   max-width: 100%;
   height: auto;
-  border-radius: 1.5rem;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 20%;
   box-shadow: var(--shadow);
   transition: transform 0.3s, box-shadow 0.3s;
   position: relative;
   z-index: 2;
   filter: drop-shadow(0 8px 24px rgba(139, 92, 246, 0.15));
+}
+
+@media (max-width: 600px) {
+  .hero-image img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 22%;
+  }
 }
 
 .hero-image img:hover {
@@ -740,6 +756,12 @@ footer {
     text-align: center;
   }
   
+  .hero-content {
+    max-height: 90px;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+  }
+  
   .hero-content h1 {
     font-size: 2.4rem;
   }
@@ -913,6 +935,12 @@ footer {
   .hero {
     padding: 22vw 2vw 0 2vw;
     min-height: 75vh;
+  }
+  
+  .hero-content {
+    max-height: 70px;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
   }
   
   .hero-content h1 {
