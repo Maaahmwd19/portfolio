@@ -1,71 +1,41 @@
 // Typing Effect for Hero Section
 const typingTexts = [
-  ["Hello, I am Mahmoud Ibrahim", "Telecom Application Developer"],
+  "Hello, I am Mahmoud Ibrahim",
+  "Telecom Application Developer"
 ];
 const typingElement = document.querySelector(".typing-effect");
 let textIndex = 0;
-let lineIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
-let lines = ["", ""];
 
 function type() {
-    const currentPair = typingTexts[textIndex];
-    if (!isDeleting) {
-        // Typing phase
-        if (charIndex < currentPair[lineIndex].length) {
-            lines[lineIndex] = currentPair[lineIndex].substring(0, charIndex + 1);
-            charIndex++;
-            updateTypingElement();
-            setTimeout(type, 80);
-        } else {
-            if (lineIndex === 0) {
-                // Move to second line
-                lineIndex = 1;
-                charIndex = 0;
-                setTimeout(type, 400);
-            } else {
-                // Both lines done, pause
-                setTimeout(() => {
-                    isDeleting = true;
-                    type();
-                }, 1500);
-            }
-        }
+  const currentText = typingTexts[textIndex];
+  if (!isDeleting) {
+    if (charIndex < currentText.length) {
+      typingElement.textContent = currentText.substring(0, charIndex + 1);
+      charIndex++;
+      setTimeout(type, 80);
     } else {
-        // Deleting phase
-        if (charIndex > 0) {
-            lines[lineIndex] = currentPair[lineIndex].substring(0, charIndex - 1);
-            charIndex--;
-            updateTypingElement();
-            setTimeout(type, 40);
-        } else {
-            if (lineIndex === 1) {
-                // Move to first line
-                lineIndex = 0;
-                charIndex = currentPair[0].length;
-                setTimeout(type, 200);
-            } else {
-                // Both lines deleted, next pair
-                isDeleting = false;
-                textIndex = (textIndex + 1) % typingTexts.length;
-                lineIndex = 0;
-                charIndex = 0;
-                lines = ["", ""];
-                setTimeout(type, 500);
-            }
-        }
+      setTimeout(() => {
+        isDeleting = true;
+        type();
+      }, 1500);
     }
+  } else {
+    if (charIndex > 0) {
+      typingElement.textContent = currentText.substring(0, charIndex - 1);
+      charIndex--;
+      setTimeout(type, 40);
+    } else {
+      isDeleting = false;
+      textIndex = (textIndex + 1) % typingTexts.length;
+      setTimeout(type, 500);
+    }
+  }
 }
 
-function updateTypingElement() {
-    typingElement.innerHTML =
-        `<span>${lines[0]}</span><br><span>${lines[1]}</span>`;
-}
-
-// Start typing effect only if element exists
 if (typingElement) {
-    type();
+  type();
 }
 
 // Enhanced Mobile Navigation
