@@ -1,41 +1,10 @@
 // Typing Effect for Hero Section
-const typingTexts = [
-  "Hello, I am Mahmoud Ibrahim",
-  "Telecom Application Developer"
-];
 const typingElement = document.querySelector(".typing-effect");
-let textIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
-
-function type() {
-  const currentText = typingTexts[textIndex];
-  if (!isDeleting) {
-    if (charIndex < currentText.length) {
-      typingElement.textContent = currentText.substring(0, charIndex + 1);
-      charIndex++;
-      setTimeout(type, 80);
-    } else {
-      setTimeout(() => {
-        isDeleting = true;
-        type();
-      }, 1500);
-    }
-  } else {
-    if (charIndex > 0) {
-      typingElement.textContent = currentText.substring(0, charIndex - 1);
-      charIndex--;
-      setTimeout(type, 40);
-    } else {
-      isDeleting = false;
-      textIndex = (textIndex + 1) % typingTexts.length;
-      setTimeout(type, 500);
-    }
-  }
-}
-
 if (typingElement) {
-  type();
+  typingElement.innerHTML = `<strong>Hello!</strong> <br>I am Mahmoud Ibrahim<br>Telecom Application Developer`;
+  setTimeout(() => {
+    typingElement.classList.add('hero-title-animate');
+  }, 770);
 }
 
 // Enhanced Mobile Navigation
@@ -323,3 +292,46 @@ function onScrollSpy() {
 
 window.addEventListener('scroll', onScrollSpy);
 window.addEventListener('load', onScrollSpy);
+
+// === Voice Introduction Play Button ===
+const playIntroBtn = document.getElementById('play-intro-btn');
+const introAudio = document.getElementById('intro-audio');
+const soundWave = document.getElementById('sound-wave');
+const introLabel = document.getElementById('intro-label'); // عنصر النص الجديد
+if (playIntroBtn && introAudio && soundWave) {
+  let isIntroPlaying = false;
+  playIntroBtn.addEventListener('click', function() {
+    if (!isIntroPlaying) {
+      introAudio.play();
+      playIntroBtn.querySelector('i').classList.remove('fa-volume-up');
+      playIntroBtn.querySelector('i').classList.add('fa-pause');
+      soundWave.style.display = 'inline-flex';
+      if (introLabel) introLabel.style.display = 'none'; // إخفاء النص
+    } else {
+      introAudio.pause();
+      playIntroBtn.querySelector('i').classList.remove('fa-pause');
+      playIntroBtn.querySelector('i').classList.add('fa-volume-up');
+      soundWave.style.display = 'none';
+      if (introLabel) introLabel.style.display = 'inline'; // إظهار النص
+    }
+  });
+  introAudio.addEventListener('play', function() {
+    isIntroPlaying = true;
+    soundWave.style.display = 'inline-flex';
+    if (introLabel) introLabel.style.display = 'none'; // إخفاء النص
+  });
+  introAudio.addEventListener('pause', function() {
+    isIntroPlaying = false;
+    playIntroBtn.querySelector('i').classList.remove('fa-pause');
+    playIntroBtn.querySelector('i').classList.add('fa-volume-up');
+    soundWave.style.display = 'none';
+    if (introLabel) introLabel.style.display = 'inline'; // إظهار النص
+  });
+  introAudio.addEventListener('ended', function() {
+    isIntroPlaying = false;
+    playIntroBtn.querySelector('i').classList.remove('fa-pause');
+    playIntroBtn.querySelector('i').classList.add('fa-volume-up');
+    soundWave.style.display = 'none';
+    if (introLabel) introLabel.style.display = 'inline'; // إظهار النص
+  });
+}

@@ -6,7 +6,7 @@
     <title> Mahmoud Ibrahim  </title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Crimson+Text:wght@400;600;700&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Animated Background -->
@@ -48,6 +48,25 @@
     <!-- Hero Section -->
     <section id="hero" class="hero">
         <div class="hero-content">
+            <div class="intro-audio-row" style="display: flex; align-items: center; gap: 16px; margin-bottom: 18px;">
+              <button id="play-sound-btn" class="main-btn">
+                  <i class="fas fa-volume-up"></i>
+              </button>
+              <span id="intro-label" style="font-size: 1.22em; font-family: 'Rubik', Arial, sans-serif; color: var(--text-light); font-weight: 700; letter-spacing: 0.5px; font-style: italic;">introducing Myself</span>
+              <div id="sound-wave" class="boxContainer" style="margin-left:8px;">
+                <div class="box box1"></div>
+                <div class="box box2"></div>
+                <div class="box box3"></div>
+                <div class="box box4"></div>
+                <div class="box box5"></div>
+                <div class="box box6"></div>
+                <div class="box box7"></div>
+                <div class="box box8"></div>
+                <div class="box box9"></div>
+                <div class="box box10"></div>
+              </div>
+            </div>
+            <audio id="my-audio" src="intro_out.mp3"></audio>
             <h1><span class="typing-effect"></span></h1>
         </div>
         <div class="hero-image">
@@ -56,7 +75,7 @@
             <div class="shape-3"></div>
             <div class="shape-4"></div>
             <div style="position: relative; display: inline-block;">
-                <img src="c.jpg" alt="Telecom Network" class="hero-photo-effect">
+                <img src="c.jpg" alt="PP" class="hero-photo-effect">
                 <span style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.6); color: #fff; padding: 6px 16px; border-radius: 16px; font-size: 1.1em; font-family: 'Playfair Display', serif;">
                     
                 </span>
@@ -393,40 +412,7 @@
 
     <script src="script.js"></script>
     <script>
-        // Enhanced navigation for projects section
-        document.querySelectorAll('.nav-links a').forEach(link => {
-          link.addEventListener('click', function(e) {
-            e.preventDefault();
-            let targetId = this.getAttribute('href').slice(1);
-
-            // Special handling for projects section
-            if (targetId === 'projects') {
-              targetId = 'projects-title';
-              const targetElement = document.getElementById(targetId);
-              if (targetElement) {
-                const headerHeight = document.querySelector('header') ? document.querySelector('header').offsetHeight : 0;
-                const targetPosition = targetElement.offsetTop - headerHeight - 20;
-                
-                window.scrollTo({
-                  top: targetPosition,
-                  behavior: 'smooth'
-                });
-              }
-            } else {
-              // Default smooth scrolling for other sections
-              const section = document.getElementById(targetId);
-              if (section) {
-                const headerHeight = document.querySelector('header') ? document.querySelector('header').offsetHeight : 0;
-                const targetPosition = section.offsetTop - headerHeight - 20;
-                
-                window.scrollTo({
-                  top: targetPosition,
-                  behavior: 'smooth'
-                });
-              }
-            }
-          });
-        });
+        // تم تعطيل كود التمرير اليدوي حتى يعمل scroll-margin-top من CSS بشكل صحيح
 
         // Image Modal Functions
         function openImageModal(imageSrc) {
@@ -468,6 +454,29 @@
         document.getElementById('closeModalBtn').addEventListener('click', function() {
           document.getElementById('videoModal').style.display = 'none';
           document.getElementById('demoVideoIframe').src = '';
+        });
+
+        // زر تشغيل الصوت
+        document.getElementById('play-sound-btn').addEventListener('click', function() {
+          var audio = document.getElementById('my-audio');
+          var soundWave = document.getElementById('sound-wave');
+          var introLabel = document.getElementById('intro-label');
+
+          if (audio.paused) {
+            audio.currentTime = 0;
+            audio.play();
+            soundWave.classList.add('active');
+            introLabel.style.display = 'none'; // Hide label when sound starts
+          } else {
+            audio.pause();
+            soundWave.classList.remove('active');
+            introLabel.style.display = 'inline-block'; // Show label when sound stops
+          }
+        });
+        // إخفاء الموجات عند انتهاء الصوت
+        document.getElementById('my-audio').addEventListener('ended', function() {
+          document.getElementById('sound-wave').classList.remove('active');
+          document.getElementById('intro-label').style.display = 'inline-block'; // Show label when sound ends
         });
     </script>
 </body>
