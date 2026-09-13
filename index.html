@@ -6,7 +6,7 @@
     <title> Mahmoud Ibrahim  </title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Crimson+Text:wght@400;600;700&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Animated Background -->
@@ -23,10 +23,12 @@
                 <li><a href="#education">Education</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#soft-skills">Soft Skills</a></li>
                 <li><a href="#training">Training</a></li>
                 <li><a href="#awards">Awards</a></li>
                 <li><a href="#publications">Publications</a></li>
                 <li><a href="#volunteering">Volunteering</a></li>
+                <li><a href="#languages">Languages</a></li>
             </ul>
             <div class="header-social-links">
                 <a href="https://www.linkedin.com/in/mahmoud-ibrahim1901/" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -88,7 +90,7 @@
         <h2><i class="fas fa-user"></i> About Me</h2>
         <div class="about-content">
             <div class="about-text">
-                <p>Enthusiastic and dedicated Communication and Electronics Engineer, graduated from the Faculty of Engineering. Passionate about continuous learning and development, with skills in programming languages such as C and Java. Proficient in Database Management Systems, like MySQL and PostgreSQL, and experienced in Linux System Administration I,II. Well-versed in Mobile Network architecture, Billing and Charging systems, and scripting with Bash for automation tasks. I am committed to leveraging these skills to contribute effectively to a dynamic and innovative team.</p>
+                <p>Telecom Engineer currently working at e& Egypt, with hands-on experience in charging nodes (OCC, EMM, SDP, etc.) and TELEPIN systems for online voucher management. Skilled in Splunk for monitoring, log analysis, and troubleshooting complex issues. Possesses a strong background in Linux system administration, Bash scripting, Java, and database management systems. Committed to continuous learning and delivering reliable telecom solutions in high-availability environments.</p>
             </div>
         </div>
     </section>
@@ -98,15 +100,27 @@
         <h2><i class="fas fa-briefcase"></i> Professional Experience</h2>
         <div class="about-content">
           <div class="about-text" style="width:100%;">
-            <div class="edu-entry iti-entry" style="display: flex; align-items: center; justify-content: space-between;">
-                <div class="edu-main">
-                    <strong>e& - Egypt</strong>,<br>
-                     <span style="font-style:italic;">IN Planning System Senior Specialist</span>.
+            <div class="edu-entry iti-entry">
+                <div style="display: flex; align-items: center; justify-content: space-between;">
+                    <div class="edu-main">
+                        <strong>e& - Egypt</strong>,<br>
+                         <span style="font-style:italic;">IN Planning & EMM Systems Senior Specialist</span>.
+                    </div>
+                    <div class="edu-details">
+                        <span>2025 Aug – Present</span> | <span>New Cairo, Egypt</span>
+                    </div>
+                    <img src="e&.jpg" alt="e& Logo" class="iti-logo" style="height: 56px; margin-left: 18px; margin-right: 0;" />
                 </div>
-                <div class="edu-details">
-                    <span>2025 Aug – Present</span> | <span>5 districts, New cairo, Egypt</span>
-                </div>
-                <img src="e&.jpg" alt="e& Logo" class="iti-logo" style="height: 56px; margin-left: 18px; margin-right: 0;" />
+                <ul style="padding-left: 1.3rem; margin-top: 1.1rem; color: var(--text-light); line-height: 1.8; font-size: 1.05rem;">
+                    <li>Worked on <strong>EMM System development</strong>, configuration, and operational support.</li>
+                    <li>Managed <strong>capacity planning and performance assessment</strong> to ensure system scalability and service availability.</li>
+                    <li>Delivered <strong>E-Voucher and Online Payment integration</strong> using the <strong>TELEPIN</strong> system.</li>
+                    <li>Designed and implemented an <strong>end-to-end Observability Stack</strong> integrating CNIS Clusters, Envoy, Grafana, Loki, and Mimir for centralized logs, metrics, monitoring, and troubleshooting.</li>
+                    <li>Integrated <strong>Grafana with Loki and Mimir</strong> for real-time monitoring of KPIs, system health, capacity, and performance.</li>
+                    <li>Developed complex <strong>Splunk SPL queries</strong> for anomaly detection, incident investigation, capacity monitoring, and proactive troubleshooting.</li>
+                    <li>Built an <strong>AI-RCA Stack using Ollama</strong> to introduce AI-Ops capabilities for automated log analysis, incident investigation, and root-cause identification.</li>
+                    <li>Automated operational tasks using <strong>Bash scripting on Linux</strong>, improving operational efficiency and reducing manual intervention.</li>
+                </ul>
             </div>
 
           </div>
@@ -134,7 +148,7 @@
                     <span style="font-style:italic;">B.Sc. in Electrical Engineering (Electronics & Communications)</span>
                 </div>
                 <div class="edu-details">
-                    <span>2019 Sept – 2024 Jul</span> &nbsp;|&nbsp; <span>Port Said, Egypt</span>
+                    <span>2019 – 2024 Jul</span> &nbsp;|&nbsp; <span>Port Said, Egypt</span>
                 </div>
                 <div style="display: flex; gap: 8px; margin-left: 18px;">
                   <img src="eng.jpeg" alt="Engineering Logo" style="height: 48px; border-radius: 8px; background: #fff;" />
@@ -153,6 +167,60 @@
           <i class="fas fa-code-branch"></i> Projects
         </h2>
         <div class="project-grid">
+            <!-- Project 0a -->
+            <div class="project-card">
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3>AI-Ops & Intelligent Root Cause Analysis (RCA) Platform</h3>
+                        <span class="tech-tag">Ollama</span>
+                        <span class="tech-tag">Grafana</span>
+                        <span class="tech-tag">Loki</span>
+                        <span class="tech-tag">Mimir</span>
+                        <span class="tech-tag">Envoy</span>
+                        <span class="tech-tag">NGINX</span>
+                        <span class="tech-tag">CNIS</span>
+                        <span class="tech-tag">Linux</span>
+                    </div>
+                    <p>(e& - Project) Built an AI-powered RCA platform using Ollama for intelligent log analysis and troubleshooting. Integrated CNIS with Loki & Mimir via Envoy and connected them to Grafana. Developed an AI chatbot embedded in Grafana via NGINX, enabling natural-language queries about system logs, metrics, and status, as part of an integrated AI-Ops & Observability Stack for faster incident analysis and resolution.</p>
+                </div>
+            </div>
+            <!-- Project 0b -->
+            <div class="project-card">
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3>Task Management Tool</h3>
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">HTML/CSS/JS</span>
+                        <span class="tech-tag">Docker</span>
+                    </div>
+                    <p>(e& - Project) A modern task manager to track user performance, organize tasks, and store documents. Developed and deployed using Django, PostgreSQL, and HTML/CSS/JS, with Frontend, Backend, and Database containerized separately using Docker. Automated team workflows and built a centralized IN Document Repository with team sharing and role-based access control.</p>
+                </div>
+            </div>
+            <!-- Project 0c -->
+            <div class="project-card">
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3>Splunk Edge Processor</h3>
+                        <span class="tech-tag">Splunk</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">SPL2</span>
+                    </div>
+                    <p>(e& - POC) Designed and deployed an end-to-end, fully containerized Splunk pipeline (UF → Edge Processor → Splunk Enterprise) on a single VM using Docker. Built SPL2 pipelines to parse XML-based telecom network data into structured JSON events, achieving more than ~60% reduction in Splunk ingest volume.</p>
+                </div>
+            </div>
+            <!-- Project 0d -->
+            <div class="project-card">
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3>Splunk Data Filteration Using Regex</h3>
+                        <span class="tech-tag">Splunk</span>
+                        <span class="tech-tag">Regex</span>
+                        <span class="tech-tag">Heavy Forwarder</span>
+                    </div>
+                    <p>(e& - POC) Designed and implemented a Splunk regex-based POC for data filtering at the Heavy Forwarder (HF) level, using transforms.conf and props.conf to intercept and drop/route specific log events before indexing — targeting XML-formatted logs from IN nodes, achieving 50-80% reduction in unnecessary data ingestion and optimizing indexer storage.</p>
+                </div>
+            </div>
             <!-- Project 1 -->
             <div class="project-card">
                 <div class="project-content">
@@ -280,14 +348,31 @@
         <div class="skills-grid">
             <div class="skill-category" style="width:100%;">
                 <ul style="list-style:none; padding:0;">
-                    <li><strong>Telecommunication:</strong> GSM, 3G, 4G and 5G, SS7, Charging, Billing, VAS, Provisioning, Mediation, BroadBand, Fintech</li>
+                    <li><strong>Telecom & IN Systems:</strong> Charging systems, Planning & Capacity Assessment, Multi Mediation System, E-voucher Systems (TELEPIN), GSM, 3G, 4G and 5G</li>
                     <li><strong>System Administration:</strong> Linux System Admin I, II, Bash Scripting</li>
+                    <li><strong>Programming Language:</strong> C / C++, Java, Python</li>
                     <li><strong>Databases:</strong> PostgreSQL, MySQL</li>
-                    <li><strong>Programming Languages:</strong> C / C++, Java, Python</li>
-                    <li><strong>Software Methodologies:</strong> Agile, Scrum, Data Structure and Algorithm, OOP principles</li>
                     <li><strong>Web Development:</strong> HTML5, CSS3 and JavaScript, Java servlet, RESTFUL API</li>
-                    <li><strong>Version Control:</strong> GitHub</li>
+                    <li><strong>Software Methodologies:</strong> Agile/Scrum, Data Structure and Algorithm, OOP principles</li>
+                    <li><strong>Monitoring & Analytics:</strong> Splunk, Grafana</li>
+                    <li><strong>Version Control:</strong> Git/GitHub</li>
                     <li><strong>Others:</strong> Knowledge In IoT Systems, XML, JSON</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Soft Skills Section -->
+    <section id="soft-skills" class="soft-skills">
+        <h2><i class="fas fa-users"></i> Soft Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category" style="width:100%;">
+                <ul style="list-style:none; padding:0;">
+                    <li>Teamwork</li>
+                    <li>Collaboration</li>
+                    <li>Adaptability</li>
+                    <li>Problem-Solving</li>
+                    <li>Committed</li>
                 </ul>
             </div>
         </div>
@@ -338,7 +423,7 @@
         <div class="skills-grid">
             <div class="skill-category" style="width:100%;">
                 <ul style="list-style:none; padding:0;">
-                    <li><strong>First place at Port Said Engineering Day Competition</strong></li>
+                    <li><strong>First place at Port Said Engineering Day Competition</strong> — 2025 Feb 25</li>
                     <li>Awarded First Place for developing an AI & IoT-powered Aquaponic System.</li>
                 </ul>
                 <div class="awards-images" style="display: flex; flex-direction: row; gap: 32px; margin-top: 18px;">
@@ -394,6 +479,19 @@
                     <li><strong>Port Said Faculty of Engineering Students Union</strong>, Vice Head of Scientific Committee.</li>
                     <li><strong>Google Developer Groups Port Said (GDGs)</strong>, Organizer</li>
                     <li><strong>IEEE PSU Branch</strong>, Member of Secretary Committee.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Languages Section -->
+    <section id="languages" class="languages">
+        <h2><i class="fas fa-globe"></i> Languages</h2>
+        <div class="skills-grid">
+            <div class="skill-category" style="width:100%;">
+                <ul style="list-style:none; padding:0;">
+                    <li>Arabic</li>
+                    <li>English</li>
                 </ul>
             </div>
         </div>

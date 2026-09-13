@@ -1,7 +1,7 @@
 // Typing Effect for Hero Section
 const typingElement = document.querySelector(".typing-effect");
 if (typingElement) {
-  typingElement.innerHTML = `<strong>Hello!</strong> <br>I am Mahmoud Ibrahim<br>Telecom Application Developer`;
+  typingElement.innerHTML = `<strong>Hello!</strong> <br>I am Mahmoud Ibrahim<br>Telecom Systems Engineer`;
   setTimeout(() => {
     typingElement.classList.add('hero-title-animate');
   }, 770);
